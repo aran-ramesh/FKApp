@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
+import SliderModal from './SliderModal';
 
-export default function App() {
+const App = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <TouchableOpacity
+        style={styles.iconButton}
+        onPress={() => setModalVisible(true)}
+      >
+        <Text>Open Modal</Text>
+      </TouchableOpacity>
+      <SliderModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row', // Align items from right to left
+  },
+  iconButton: {
+    backgroundColor: '#4CAF50',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginHorizontal: 10,
   },
 });
+
+export default App;
