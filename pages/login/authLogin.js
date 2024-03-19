@@ -4,17 +4,21 @@ import { StyleSheet, Text, View,ImageBackground,SafeAreaView,TextInput,Button} f
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Provider } from "react-redux";
 import SliderModal from './otpScreen';
-
+import { useTranslation } from 'react-i18next';
+import Language from '../language/multipleLanguage';
 
     const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
 
 
-export default function Login() {
+export default function Login({navigation}) {
   //state
   const [userEmail,setUserEmail]=useState(null);
   const [loginBtn,setLoginBtn]=useState(false);
   const [valid,setValid]=useState(false);
   const [modalVisible, setModalVisible] = useState(false);
+  const[lanvisible,setLanVisible]=useState(false);
+  //translation
+  const { t } = useTranslation(); 
   //function
   const handleChange=(e)=>{
     console.log(e.nativeEvent.text); 
@@ -38,7 +42,11 @@ export default function Login() {
   }
   useEffect(()=>{
    console.log(userEmail);
-  },[userEmail])
+  },[userEmail]);
+
+  const handleLan=()=>{
+    setLanVisible(true);
+  }
   return (
 
     <SafeAreaView style={styles.container}>
@@ -49,7 +57,7 @@ export default function Login() {
 
        <View style={styles.container1}>
           <View style={styles.line}></View>
-          <Text style={styles.text1}>Log in or sign up </Text>
+          <Text style={styles.text1}>{t('screens.login.text.login')}</Text>
           <View style={styles.line}></View>
        </View>
 
@@ -57,7 +65,7 @@ export default function Login() {
        <View style={styles.inputView}>
           <TextInput
           style={styles.inputText}
-         placeholder={valid?valid:"Enter Email Id"}
+         placeholder={valid?valid:t('screens.login.text.email')}
          placeholderTextColor="#003f5c"
          onChange={(e)=>handleChange(e)}
          />
@@ -65,7 +73,7 @@ export default function Login() {
        {/* input Button */}
        <View style={styles.login}>
          <Button
-           title="continue"
+           title={t('screens.login.text.continue')}
            color="#28be21"
            accessibilityLabel="Learn more about this purple button"
            style={styles.loginBtn}
@@ -82,7 +90,7 @@ export default function Login() {
       {/* social Button */}
       <View style={styles.social}>
       <View style={styles.socialIcons}>
-      <Icon name="google" size={30} color="#4285F4" />
+      <Icon name="google" size={30} color="#4285F4" onPress={handleLan} />
       </View>
 
       <View style={styles.socialIcons}>
@@ -104,6 +112,7 @@ export default function Login() {
       {modalVisible &&
         <SliderModal visible={modalVisible} onClose={() => setModalVisible(false)} email={userEmail} setUserEmail={setUserEmail}/>
        }
+      <Language lanShow={lanvisible} onClose={() => setLanVisible(false)}/>
     </SafeAreaView>
   );
 }

@@ -1,0 +1,23 @@
+{
+    "screens": {
+        "login": {
+            "text": {
+              "login": "Log in or sign up ",
+              "continue":"continue",
+              "email":"Enter Email"
+            }
+          },
+          "otp": {
+            "text": {
+              "OTP Verfication": "OTP Verfication",
+              "Verification_code":"We have sent a verification code to",
+              "continue":"continue"
+            }
+        },
+      "list": {
+        "text": {
+          "home": "Home"
+        }
+      }
+    }
+  }

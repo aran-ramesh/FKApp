@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import { useTranslation } from 'react-i18next';
 
 
 const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
@@ -19,7 +20,7 @@ const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
     const [resendTime, setResendTime] = useState(13);
 
     const navigation = useNavigation();
-
+    const { t } = useTranslation(); 
     const slideAnim = useRef(new Animated.Value(400)).current;
 
     useEffect(() => {
@@ -80,10 +81,10 @@ const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
                 <Animated.View style={[styles.modal, { transform: [{ translateX: slideAnim }] }]}>
                     <View style={{ flexDirection: 'row' }}>
                         <Ionicons name="arrow-back" style={{ paddingRight: 10 }} size={24} onPress={() => onClose()} color="black" />
-                        <Text style={styles.heading}>OTP Verification</Text>
+                        <Text style={styles.heading}>{t('screens.otp.text.OTP Verfication')} </Text>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <Text style={styles.subHeading}>We have sent a verification code to </Text>
+                        <Text style={styles.subHeading}>{t('screens.otp.text.Verification_code')} </Text>
 
                     </View>
                     <Text style={styles.subHeading1}>{email}</Text>
@@ -103,7 +104,7 @@ const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
                         </View>
                     </View>
                     <Button
-                         title="continue"
+                         title={t('screens.otp.text.continue')}
                          color="#28be21"
                          accessibilityLabel="Learn more about this purple button"
                          onPress={hadleSubmit}

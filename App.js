@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './pages/login/authLogin';
 import HomeScreen from './pages/list/HomeScreen';
+import i18n from './pages/localization/i18n';
 const Stack = createNativeStackNavigator();
 export default function App() {
 

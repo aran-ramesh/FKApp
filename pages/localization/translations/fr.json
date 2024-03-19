@@ -1,0 +1,23 @@
+{
+    "screens": {
+        "login": {
+            "text": {
+              "login": "Identifiez-vous ou inscrivez-vous",
+              "continue":"continuer",
+              "email":"Entrez l'e-mail"
+            }
+        },
+        "otp": {
+            "text": {
+              "OTP Verfication": " Vérification OTP",
+              "Verification_code":"Nous avons envoyé un code de vérification à",
+              "continue":"continuer"
+            }
+        },
+      "list": {
+        "text": {
+          "home": "Accueil"
+        }
+      }
+    }
+  }

@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import { View, Text, Button, TextInput, StyleSheet,Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ListPageScreen from './listCard';
-
+import { useTranslation } from 'react-i18next';
+import Language from '../language/multipleLanguage';
 const placeholderTexts = ['Search "briyani"', 'Search "vada pav"', 'Search "shawarma"', 'Search "burger"']; // Placeholder texts
 
 
-function HomeScreen({ navigation }) {
-
-
+function HomeScreen({navigation}) {
+    const { t } = useTranslation();
+    const[lanvisible,setLanVisible]=useState(false);
     const [placeholderIndex, setPlaceholderIndex] = useState(0); // Index for current placeholder
     const [placeholder, setPlaceholder] = useState(placeholderTexts[0]); // Current placeholder text
     const opacity = new Animated.Value(0); // Animated value for opacity
@@ -62,6 +63,10 @@ function HomeScreen({ navigation }) {
     
         return () => clearInterval(interval); // Cleanup interval on unmount
       }, [placeholderIndex]);
+
+    const handleLan=()=>{
+      setLanVisible(true);
+    }
     
   return (
 
@@ -72,12 +77,12 @@ function HomeScreen({ navigation }) {
             <Icon name="map-marker" size={26} color="red" style={styles.icon} />
           </View>
         <View>
-        <Text style={styles.streetText}>Home   <Icon name="angle-down" size={20} color="black" style={styles.downicon} /></Text>
+        <Text style={styles.streetText}> {t('screens.list.text.home')} <Icon name="angle-down" size={20} color="black" style={styles.downicon} /></Text>
           <Text style={styles.fullAddressText}>Ram nagar 6th street...</Text>
         </View>
         </View>
         <View style={styles.profileContainer}>
-            <Icon   onPress={() => navigation.navigate('Profile')}  name="user-circle-o" size={26} color="black" style={styles.icon} />
+            <Icon   onPress={handleLan}  name="user-circle-o" size={26} color="black" style={styles.icon} />
         </View>
       </View>
       <View style={styles.searchBar}>
@@ -95,6 +100,7 @@ function HomeScreen({ navigation }) {
       </View>
     </View>
     <ListPageScreen/>
+   
     </SafeAreaView>
   );
 }
