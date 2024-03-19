@@ -84,7 +84,6 @@ const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
                     </View>
                     <View style={styles.buttonContainer}>
                         <Text style={styles.subHeading}>We have sent a verification code to </Text>
-
                     </View>
                     <Text style={styles.subHeading1}>{email}</Text>
                     <View style={styles.buttonContainer}>

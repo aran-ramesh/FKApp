@@ -77,7 +77,7 @@ function HomeScreen({ navigation }) {
         </View>
         </View>
         <View style={styles.profileContainer}>
-            <Icon   onPress={() => navigation.navigate('Profile')}  name="user-circle-o" size={26} color="black" style={styles.icon} />
+            <Icon onPress={() => navigation.navigate('Profile')}  name="user-circle-o" size={26} color="black" style={styles.icon} />
         </View>
       </View>
       <View style={styles.searchBar}>
