@@ -8,12 +8,17 @@ import {
     Modal,
     Animated,
     Easing,
+    Button,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
-const SliderModal = ({ visible, onClose }) => {
+
+const SliderModal = ({ visible, onClose ,email,setUserEmail}) => {
     const [otpCode, setOtpCode] = useState(['', '', '', '']);
     const [resendTime, setResendTime] = useState(13);
+
+    const navigation = useNavigation();
 
     const slideAnim = useRef(new Animated.Value(400)).current;
 
@@ -59,6 +64,10 @@ const SliderModal = ({ visible, onClose }) => {
             }
         }
     };
+    const hadleSubmit=()=>{
+        setUserEmail(null);
+        navigation.navigate('List');
+    }
 
     return (
         <Modal
@@ -77,7 +86,7 @@ const SliderModal = ({ visible, onClose }) => {
                         <Text style={styles.subHeading}>We have sent a verification code to </Text>
 
                     </View>
-                    <Text style={styles.subHeading1}>+91-9025626989</Text>
+                    <Text style={styles.subHeading1}>{email}</Text>
                     <View style={styles.buttonContainer}>
                         <View style={styles.otpContainer}>
                             {otpCode.map((value, index) => (
@@ -93,8 +102,19 @@ const SliderModal = ({ visible, onClose }) => {
                             ))}
                         </View>
                     </View>
+                    <Button
+                         title="continue"
+                         color="#28be21"
+                         accessibilityLabel="Learn more about this purple button"
+                         onPress={hadleSubmit}
+                         style={{margin:15}}
+                       />
                     <View style={styles.buttonContainer}>
+                    
                         <Text>Didn't get the OTP? Resend SMS in {resendTime}s</Text>
+                    </View>
+                    <View >
+                      
                     </View>
                     <View style={styles.goBack}>
                         <TouchableOpacity onPress={onClose}>
