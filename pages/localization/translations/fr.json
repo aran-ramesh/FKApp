@@ -1,23 +1,66 @@
 {
-    "screens": {
-        "login": {
-            "text": {
-              "login": "Identifiez-vous ou inscrivez-vous",
-              "continue":"continuer",
-              "email":"Entrez l'e-mail"
-            }
-        },
-        "otp": {
-            "text": {
-              "OTP Verfication": " Vérification OTP",
-              "Verification_code":"Nous avons envoyé un code de vérification à",
-              "continue":"continuer"
-            }
-        },
-      "list": {
-        "text": {
-          "home": "Accueil"
-        }
+  "screens": {
+    "login": {
+      "text": {
+        "login": "Identifiez-vous ou inscrivez-vous",
+        "continue": "continuer",
+        "email": "Entrez l'e-mail"
+      }
+    },
+    "otp": {
+      "text": {
+        "OTP Verfication": " Vérification OTP",
+        "Verification_code": "Nous avons envoyé un code de vérification à",
+        "continue": "continuer"
+      }
+    },
+    "list": {
+      "text": {
+        "home": "Accueil"
+      }
+    },
+    "profile": {
+      "text": {
+        "view activity": "Afficher l'activité",
+        "Favourites": "Favoris",
+        "Wallet T&C": "Portefeuille et CGU",
+        "Your orders": "Vos commandes",
+        "Food Orders": "Commandes de nourriture",
+        "Favourite orders": "Commandes favorites",
+        "Address book": "Carnet d'adresses",
+        "Hidden Restaurants": "Restaurants cachés",
+        "Online ordering help": "Aide à la commande en ligne",
+        "Your deals & transaction": "Vos transactions et offres",
+        "Your dining rewards": "Vos récompenses de repas",
+        "Your table bookings": "Vos réservations de table",
+        "Dining help": "Aide à la restauration",
+        "Frequently asked questions": "Questions fréquemment posées",
+        "Your event tickets": "Vos billets d'événement",
+        "Events help": "Aide aux événements",
+        "Money": "Argent",
+        "Fusion Money": "Argent Fusion",
+        "Restaurant Awards 2024 ": "Prix des restaurants 2024",
+        "For Employees": "Pour les employés",
+        "For Employers": "Pour les employeurs",
+        "Winning Awards": "Prix gagnants",
+        "Buy Gift Card": "Acheter une carte cadeau",
+        "Claim Gift Card": "Réclamer une carte cadeau",
+        "Fusion Wallet": "Portefeuille Fusion",
+        "Fusion Credits": "Crédits Fusion",
+        "Fusion For Enterprise": "Fusion pour les entreprises",
+        "Manage payment methods": "Gérer les modes de paiement",
+        "Coupons": "Coupons",
+        "Collected Coupons": "Coupons collectés",
+        "Restaurant Awards 2024": "Prix des restaurants 2024",
+        "More": "Plus",
+        "Choose Language": "Choisir la langue",
+        "About": "À propos de",
+        "Send Feedback": "Envoyer des commentaires",
+        "Get feeding receipt": "Obtenir un reçu de repas",
+        "Report a safety emergency": "Signaler une urgence de sécurité",
+        "Settings": "Paramètres",
+        "Logout": "Déconnexion"
       }
     }
   }
+}

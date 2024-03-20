@@ -1,24 +1,66 @@
 {
-    "screens": {
-        "login": {
-            "text": {
-              "login": "உள்நுழையவும் அல்லது பதிவு செய்யவும் ",
-              "continue":"தொடரவும்",
-              "email":"மின்னஞ்சலை உள்ளிடவும்"
-            }
-          },
-        "otp": {
-            "text": {
-              "OTP Verfication": "OTP சரிபார்ப்பு",
-              "Verification_code":"இதற்கு சரிபார்ப்புக் குறியீட்டை அனுப்பியுள்ளோம்",
-              "continue":"தொடரவும்"
-
-            }
-        },
-      "list": {
-        "text": {
-          "home": "வீடு"
-        }
+  "screens": {
+    "login": {
+      "text": {
+        "login": "உள்நுழையவும் அல்லது பதிவு செய்யவும் ",
+        "continue":"தொடரவும்",
+        "email":"மின்னஞ்சலை உள்ளிடவும்"
       }
-    }
+    },
+    "otp": {
+      "text": {
+        "OTP Verfication": "OTP சரிபார்ப்பு",
+        "Verification_code": "இதற்கு சரிபார்ப்புக் குறியீட்டை அனுப்பியுள்ளோம்",
+        "continue": "தொடரவும்"
+      }
+    },
+    "list": {
+      "text": {
+        "home": "வீடு"
+      }
+    },
+    "profile": {
+      "text": {
+        "view activity": "செயல்பாடுகளை காண்பி",
+        "Favourites": "பிடித்தமைப்புகள்",
+        "Wallet T&C": "வாலட் டி&சி",
+        "Your orders": "உங்கள் ஆணைகள்",
+        "Food Orders": "உணவு ஆணைகள்",
+        "Favourite orders": "பிடித்த ஆணைகள்",
+        "Address book": "முகவரி புத்தகம்",
+        "Hidden Restaurants": "மறைந்த உணவகங்கள்",
+        "Online ordering help": "ஆன்லைன் ஆணை உதவி",
+        "Your deals & transaction": "உங்கள் ஒப்பந்தங்கள் & பரிவர்த்தனை",
+        "Your dining rewards": "உங்கள் உணவு வெகுமதி",
+        "Your table bookings": "உங்கள் டேபிள் பதிவுகள்",
+        "Dining help": "உணவு உதவி",
+        "Frequently asked questions": "அடிப்படையில் கேள்விகள்",
+        "Your event tickets": "உங்கள் நிகழ்வு டிக்கெட்கள்",
+        "Events help": "நிகழ்வுகள் உதவி",
+        "Money": "பணம்",
+        "Fusion Money": "ஃபியூஷன் பணம்",
+        "Restaurant Awards 2024 ": "உணவக் கருப்புகள் 2024",
+        "For Employees": "ஊழியர்களுக்கான",
+        "For Employers": "உத்தியார்களுக்கான",
+        "Winning Awards": "வெற்றிகரமான விருதுகள்",
+        "Buy Gift Card": "பரிசு அட்டை வாங்கு",
+        "Claim Gift Card": "பரிசு அட்டை கோர்க்க",
+        "Fusion Wallet": "ஃபியூஷன் பணப் பெட்டி",
+        "Fusion Credits": "ஃபியூஷன் கடன்",
+        "Fusion For Enterprise": "ஃபியூஷன் மின் தொழில்",
+        "Manage payment methods": "கட்டண முறைகளை நிர்வகி",
+        "Coupons": "கூப்பன்கள்",
+        "Collected Coupons": "சேகரிக்கப்பட்ட கூப்பன்கள்",
+        "Restaurant Awards 2024": "உணவக் கருப்புகள் 2024",
+        "More": "மேலும்",
+        "Choose Language": "மொழியை தேர்வு செய்க",
+        "About": "பற்றி",
+        "Send Feedback": "பின்தொடர் பின்தொடர்",
+        "Get feeding receipt": "உணவு ரசீதைப் பெறு",
+        "Report a safety emergency": "பாதுகாப்பு அவசரம் அறிக்க",
+        "Settings": "அமைப்புகள்",
+        "Logout": "வெளியேறு"
+      }
+      }
   }
+}

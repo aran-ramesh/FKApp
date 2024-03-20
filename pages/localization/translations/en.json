@@ -1,23 +1,66 @@
 {
-    "screens": {
-        "login": {
-            "text": {
-              "login": "Log in or sign up ",
-              "continue":"continue",
-              "email":"Enter Email"
-            }
-          },
-          "otp": {
-            "text": {
-              "OTP Verfication": "OTP Verfication",
-              "Verification_code":"We have sent a verification code to",
-              "continue":"continue"
-            }
-        },
-      "list": {
-        "text": {
-          "home": "Home"
-        }
+  "screens": {
+    "login": {
+      "text": {
+        "login": "Log in or sign up ",
+        "continue": "continue",
+        "email": "Enter Email"
+      }
+    },
+    "otp": {
+      "text": {
+        "OTP Verfication": "OTP Verfication",
+        "Verification_code": "We have sent a verification code to",
+        "continue": "continue"
+      }
+    },
+    "list": {
+      "text": {
+        "home": "Home"
+      }
+    },
+    "profile": {
+      "text": {
+        "view activity": "view activity ",
+        "Favourites": "Favourites",
+        "Wallet T&C": "Wallet T&C",
+        "Your orders": "Your orders",
+        "Food Orders": "Food Orders",
+        "Favourite orders": "Favourite orders",
+        "Address book": "Address Book",
+        "Hidden Restaurants": "Hidden Restaurants",
+        "Online ordering help": "Online ordering help",
+        "Your deals & transaction": "Your deals & transaction",
+        "Your dining rewards": "Your dining rewards",
+        "Your table bookings": "Your table bookings",
+        "Dining help": "Dining Help",
+        "Frequently asked questions": "Frequently asked questions",
+        "Your event tickets": "Your event tickets",
+        "Events help": "EventsHelp",
+        "Money": "Money",
+        "Fusion Money": "Fusion Money",
+        "Restaurant Awards 2024 ": "Restaurant Awards 2024 ",
+        "For Employees": "For Employees",
+        "For Employers": "For Employers",
+        "Winning Awards": "Winning Awards",
+        "Buy Gift Card": "Buy Gift Card",
+        "Claim Gift Card": "Claim Gift Card",
+        "Fusion Wallet": "Fusion Wallet",
+        "Fusion Credits": "Fusion Credits",
+        "Fusion For Enterprise": "Fusion For Enterprise",
+        "Manage payment methods": "Manage Payment Methods",
+        "Coupons": "Coupons",
+        "Collected Coupons": "Collected Coupons",
+        "Restaurant Awards 2024": "Restaurant Awards 2024",
+        "More": "More",
+        "Choose Language": " Choose Language",
+        "About": "About",
+        "Send Feedback": "Send Feedback",
+        "Get feeding receipt": "Get feeding receipt",
+        "Report a safety emergency": "Report a safety emergency",
+        "Settings": "Settings",
+        "Logout": "Logout"
       }
     }
   }
+}
