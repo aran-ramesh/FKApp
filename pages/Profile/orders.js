@@ -5,8 +5,7 @@ import { Card, Title } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 import CommonSlider from './CommonPopup';
 
-const UpdateProfile = ({ navigation }) => {
-    const { updateProfile, setupdateProfile } = useContext(CheckoutContext);
+const Orders = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <Ionicons name="arrow-back" style={styles.backIcon} size={24} onPress={() => navigation.navigate('List')} color="black" />
@@ -15,7 +14,7 @@ const UpdateProfile = ({ navigation }) => {
                     <Title style={styles.cardTitle}>Hello Yagavel</Title>
                 </Card.Content> */}
                 <View style={styles.sliderContent}>
-                    <Title>Hello Yagavel</Title>
+                    <Title>Orders Hi yagavel</Title>
                 </View>
             </View>
         </SafeAreaView>
@@ -41,4 +40,4 @@ const styles = StyleSheet.create({
     backIcon: { position: 'absolute', top: 10, left: 10, padding: 100 },
 });
 
-export default UpdateProfile;
+export default Orders;
