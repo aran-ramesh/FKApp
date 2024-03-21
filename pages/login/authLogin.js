@@ -50,7 +50,7 @@ export default function Login({navigation}) {
   return (
 
     <SafeAreaView style={styles.container}>
-       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+       <ImageBackground source={require('../../assets/Login.png')} resizeMode="cover" style={styles.image}>
        </ImageBackground>
 
        <Text style={styles.text}>India's #1 Food Delivery and Dining App</Text>
@@ -122,10 +122,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    height:"100%",
   },
   image:{
     width: 450,
-    height:350,
+    height:410,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,13 +1,14 @@
 import React, { useState, useEffect,useContext } from 'react';
-import { View, Text, Button, TextInput, StyleSheet,Animated } from 'react-native';
+import { View, Text, Button, TextInput, StyleSheet,Animated, ScrollView,ImageBackground } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ListPageScreen from './listCard';
 import { useTranslation } from 'react-i18next';
 import Language from '../language/multipleLanguage';
+import { Octicons } from '@expo/vector-icons';
 const placeholderTexts = ['Search "briyani"', 'Search "vada pav"', 'Search "shawarma"', 'Search "burger"']; // Placeholder texts
-
-
+import RecommendPage from './recommend';
+import backgroundImage from '../../assets/ramadan.png';
 function HomeScreen({navigation}) {
     const { t } = useTranslation();
     const[lanvisible,setLanVisible]=useState(false);
@@ -71,10 +72,13 @@ function HomeScreen({navigation}) {
   return (
 
     <SafeAreaView  style={styles.container}>
-      <View style={styles.header}>
+      <ScrollView>
+      <ImageBackground source={require('../../assets/ramadan.png')} style={styles.background}>
+        <View>
+       <View style={styles.header}>
         <View style={styles.addressContainer}>
           <View style={styles.addressRow}>
-            <Icon name="map-marker" size={26} color="red" style={styles.icon} />
+            <Octicons name="location" size={26} color="#29BE21" style={styles.icon} />
           </View>
         <View>
         <Text style={styles.streetText}> {t('screens.list.text.home')} <Icon name="angle-down" size={20} color="black" style={styles.downicon} /></Text>
@@ -87,20 +91,22 @@ function HomeScreen({navigation}) {
       </View>
       <View style={styles.searchBar}>
       <View style={styles.searchInputContainer}>
-        <Icon name="search" size={20} color="red" style={styles.searchIcon} />
+        <Icon name="search" size={20} color="#29BE21" style={styles.searchIcon} />
         <Animated.View style={[styles.placeholderContainer, { opacity }]}>
           <TextInput
             style={styles.searchInput}
             placeholder={placeholder} // Use dynamic placeholder text
             placeholderTextColor="gray" // Placeholder text color
           />
-         
         </Animated.View>
-        <Icon name="microphone" size={20} color="red" style={styles.micIcon} />
+        <Icon name="microphone" size={20} color="#29BE21" style={styles.micIcon} />
       </View>
     </View>
+    </View>
+    </ImageBackground>
+    <RecommendPage/>
     <ListPageScreen/>
-   
+    </ScrollView>
     </SafeAreaView>
   );
 }
@@ -108,7 +114,12 @@ function HomeScreen({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:10
+    marginTop:10,
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'contain', // or 'stretch' if you want to stretch the image
+    height:290
   },
   header: {
     flexDirection: 'row',
@@ -116,7 +127,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: '#fff', // Adjust color as needed
+   
   },
   addressContainer: {
     flex: 1,
@@ -159,16 +170,18 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 10,
     paddingRight: 10,
-    shadowColor: 'rgba(100, 100, 111, 0.2)', // Shadow color
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    }, // Shadow offset
-    shadowOpacity: 1, // Shadow opacity
-    shadowRadius: 29, // Shadow blur radius
-    elevation: 5, // For Android elevation
-  padding:10
- 
+    backgroundColor:"#fff",
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
+    padding:2,
+    borderWidth:1,
+    borderColor:"#ccc"
   },
   placeholderContainer: {
     height: 40,
@@ -193,6 +206,8 @@ const styles = StyleSheet.create({
     paddingRight:10
 
   },
+
+
 });
 
 export default HomeScreen;
