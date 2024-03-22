@@ -17,6 +17,7 @@ function HomeScreen({navigation}) {
     const opacity = new Animated.Value(0); // Animated value for opacity
     const translateY = new Animated.Value(-20); // Animated value for translateY
 
+  
     
     useEffect(() => {
         Animated.parallel([
