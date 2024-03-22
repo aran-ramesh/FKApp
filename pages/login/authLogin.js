@@ -122,13 +122,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    height:"100%",
+    // flex:1,
+    minHeight: '100%',
   },
   image:{
-    width: 450,
-    height:410,
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: '100%', // Adjust image width to be responsive
+    aspectRatio: 1, // Maintain aspect ratio for responsiveness
+    marginBottom: 20,
   },
   text:{
     fontSize:30,
