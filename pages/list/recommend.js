@@ -35,6 +35,7 @@ const RecommendPage = () => {
   const customColor = "#ecffe0";
   const scrollViewRef = useRef(null);
 
+  
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollViewRef.current) {
